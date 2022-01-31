@@ -1,0 +1,10 @@
+label.required:after {
+    font-size: 80%;
+    vertical-align: top;
+    content: '*';
+    color: red;
+    padding-left: 2px;
+}
+table tbody tr th {
+    white-space: nowrap;
+}
