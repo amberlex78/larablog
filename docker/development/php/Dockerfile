@@ -46,9 +46,12 @@ RUN docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd && \
     intl \
     opcache \
     soap \
-    sockets \
     xsl \
     zip
+
+# Temporarily commented out sockets
+# https://github.com/php/php-src/pull/7981/files
+# RUN docker-php-ext-install sockets
 
 # Versions: https://xdebug.org/download/historical
 ENV XDEBUG_VERSION 3.1.2
