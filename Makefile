@@ -66,3 +66,9 @@ start-local-services:
 	sudo systemctl start apache2
 	sudo systemctl start mysql
 
+# If you need only MySQL
+# Set DB_HOST=127.0.0.1 in project/.env file
+# Locally exec: php artisan migrate:fresh
+# Locally exec: php artisan db:seed
+docker-mysql:
+	docker-compose -f docker-compose-mysql.yml up --build -d
